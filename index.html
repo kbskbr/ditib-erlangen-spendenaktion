@@ -27,8 +27,8 @@ SOFTWARE.
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="test.png">
-    <title>Spendenaktion</title>
+    <link rel="icon" href="logo.jpg">
+    <title>DITIB-Erlangen</title>
     <style>
         /* General Styles */
         body {
@@ -46,7 +46,6 @@ SOFTWARE.
             padding: 20px;
             background-color: #fff;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-
         }
 
         h1 {
@@ -85,7 +84,7 @@ SOFTWARE.
         .timeline::before {
             content: '';
             position: absolute;
-            top: 0;
+            top: 55px;
             bottom: 0;
             width: 4px;
             background: #60b2a4;
@@ -131,7 +130,6 @@ SOFTWARE.
             overflow: hidden;
             margin: 40px 0;
             border: 1px solid #60b2a4;
-
         }
 
         .iframe-container iframe {
@@ -180,7 +178,6 @@ SOFTWARE.
             /* Remove default bullets */
             padding-left: 20px;
             /* Add some padding for alignment */
-
         }
 
         .custom-bullets li {
@@ -280,13 +277,33 @@ SOFTWARE.
                 left: 2%;
                 top: 3%;
             }
+        }
 
+        /* Additional Styles for Images */
+        .image-container {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        img#donate-button {
+            width: 200px;
         }
     </style>
 </head>
 
 <body>
     <div class="container">
+        <!-- Logo -->
+        <div class="image-container" style=" text-align: right;">
+            <img src="logo.jpg" alt="Logo" style="max-width: 100px;">
+        </div>
+
         <h1>DITIB Camisi Erlangen: Geleceğe Bir İz</h1>
 
         <!-- Explanation Section -->
@@ -294,10 +311,12 @@ SOFTWARE.
             <h2>Desteğinize ihtiyacımız var!</h2>
             <p>
                 Hepimizin bildiği gibi, camimiz sadece üye aidatları ve yapılan bağışlarla ayakta durmaktadır. Bina
-                yapımı için sizlerin desteği olmadan bu projemizi hayata geçirmek mümkün olmayacaktır. Bu yüzden inşaata
+                yapımı için sizlerin desteği olmadan bu projemizi hayata geçirmek mümkün olmayacaktır. Bu yüzden
+                inşaata
                 kredi almadan, borçsuz bir şekilde başlayabilmek için en az 700.000 € bağış hedefimize ulaşmamız
                 zaruridir.
-                Bu vesileyle, bağışlarınızı Allah rızası için esirgemeyiniz. Bu proje hepimizin ortak bir eseri olup,
+                Bu vesileyle, bağışlarınızı Allah rızası için esirgemeyiniz. Bu proje hepimizin ortak bir eseri
+                olup,
                 gelecek nesillerin hayır dualarını ve yüce Allah'ın rızasını kazanabilmek için çok iyi ve önemli bir
                 fırsattır.
             </p>
@@ -310,9 +329,41 @@ SOFTWARE.
         <a id="betterplace-hinweis-link" style=" top: -40px; position: relative;">Hinweis zu
             Betterplace</a>
 
+
+        <div class="explanation1">
+            <h2>Veya buradan doğrudan PayPal ile bağış yapın:</h2>
+
+            <!-- Donation Options Container -->
+            <div style="display: flex; align-items: center; gap: 15px; margin-top: 20px; margin-left: -20px;">
+                <!-- PayPal Donation Button -->
+                <div id="donate-button-container">
+                    <div id="donate-button"></div>
+                    <script src="https://www.paypalobjects.com/donate/sdk/donate-sdk.js" charset="UTF-8"></script>
+                    <script>
+                        PayPal.Donation.Button({
+                            env: 'production',
+                            hosted_button_id: '9SRFQJ6Q8UPVL',
+                            image: {
+                                src: 'https://www.paypalobjects.com/de_DE/DE/i/btn/btn_donateCC_LG.gif',
+                                alt: 'Spenden mit dem PayPal-Button',
+                                title: 'PayPal - The safer, easier way to pay online!',
+                            }
+                        }).render('#donate-button');
+                    </script>
+                </div>
+
+                <!-- PayPal QR Code -->
+                <div class="image-container">
+                    <img src="QR-code.jpg" alt="PayPal QR Code" style="max-width: 150px;">
+                </div>
+            </div>
+        </div>
+
         <!-- Timeline Section -->
         <div class="timeline">
-            <div class="timeline-item left">
+            <h2 style="padding-top:10px;">Planlanan Proje akış cetveli </h2>
+
+            <div class="timeline-item">
                 <div class="timeline-content">
                     <h3>2023 - 2024</h3>
                     <ul class="custom-bullets">
@@ -321,7 +372,7 @@ SOFTWARE.
                     </ul>
                 </div>
             </div>
-            <div class="timeline-item right">
+            <div class="timeline-item">
                 <div class="timeline-content">
                     <h3>2024 - Aralık</h3>
                     <ul class="custom-bullets">
@@ -329,7 +380,7 @@ SOFTWARE.
                     </ul>
                 </div>
             </div>
-            <div class="timeline-item left">
+            <div class="timeline-item">
                 <div class="timeline-content">
                     <h3>2025 - Nisan</h3>
                     <ul class="custom-bullets">
@@ -337,7 +388,7 @@ SOFTWARE.
                     </ul>
                 </div>
             </div>
-            <div class="timeline-item right">
+            <div class="timeline-item">
                 <div class="timeline-content">
                     <h3>2028 - Aralık</h3>
                     <ul class="custom-bullets">
@@ -346,8 +397,6 @@ SOFTWARE.
                 </div>
             </div>
         </div>
-
-
 
         <!-- Explanation2 Section -->
         <div class="explanation2">
@@ -383,12 +432,21 @@ SOFTWARE.
                 kılınacak.
             </p>
             <p data-number="10">
-                Bayram ve Cuma namazları gibi yoğun günlerde cemaatimiz dışarıda kalmayıp, cami içinde veya avlumuzda
+                Bayram ve Cuma namazları gibi yoğun günlerde cemaatimiz dışarıda kalmayıp, cami içinde veya
+                avlumuzda
                 namazlarını eda edebilecek.
             </p>
             <p data-number="11">
                 Özellikle Cuma namazından sonraki kısa sohbetler için uygun bir ortam sağlanacak.
             </p>
+            <p data-number="12">
+                Aşağıdaki resimde görüldüğü gibi, üstü açık avlu, ferah bir ortam oluşturup, cemaatimizin gönül
+                sohbetlerine ev
+                sahipliği yapacaktır. </p>
+            <!-- House Image -->
+            <div class="image-container">
+                <img src="entwurf.jpg" alt="House Image">
+            </div>
         </div>
         <footer>
             <p>
@@ -403,9 +461,6 @@ SOFTWARE.
             <a id="datenschutz-link" style="color: white;">Datenschutzerklärung</a>
         </footer>
 
-
-
-
         <!-- Popup Texte -->
         <!-- Popup for Datenschutzerklärung -->
         <div class="popup-overlay" id="datenschutz-overlay"></div>
@@ -414,11 +469,14 @@ SOFTWARE.
             <h2>Datenschutzerklärung</h2>
             <p>
                 Verantwortlicher: DITIB Camisi Erlangen, vertreten durch Enver Sönmez.<br>
-                Diese Website wird auf GitHub Pages gehostet. GitHub kann beim Besuch der Website bestimmte Daten wie
-                IP-Adressen in Server-Logfiles speichern. Weitere Informationen finden Sie in der Datenschutzerklärung
+                Diese Website wird auf GitHub Pages gehostet. GitHub kann beim Besuch der Website bestimmte Daten
+                wie
+                IP-Adressen in Server-Logfiles speichern. Weitere Informationen finden Sie in der
+                Datenschutzerklärung
                 von GitHub: <a href="https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement"
                     target="_blank" rel="noopener noreferrer">GitHub Privacy Statement</a>.<br>
-                Diese Website enthält Links zu externen Plattformen wie Betterplace. Wir haben keine Kontrolle über die
+                Diese Website enthält Links zu externen Plattformen wie Betterplace. Wir haben keine Kontrolle über
+                die
                 Datenverarbeitung durch diese Plattformen. Bitte lesen Sie die Datenschutzrichtlinien der jeweiligen
                 Plattformen.<br>
                 Kontakt: Bei Fragen zum Datenschutz wenden Sie sich bitte an erlangen.tik@t-online.de.
@@ -435,8 +493,6 @@ SOFTWARE.
                     rel="noopener noreferrer">Datenschutzrichtlinien von Betterplace</a>.
             </p>
         </div>
-
-
 
         <script>
             // JavaScript to handle popups
