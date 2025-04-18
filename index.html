@@ -121,26 +121,6 @@ SOFTWARE.
             color: #60b2a4;
         }
 
-        /* Donation Iframe */
-        .iframe-container {
-            position: relative;
-            width: 100%;
-            padding-top: 56.25%;
-            /* 16:9 Aspect Ratio */
-            overflow: hidden;
-            margin: 40px 0;
-            border: 1px solid #60b2a4;
-        }
-
-        .iframe-container iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border: none;
-        }
-
         /* Explanation2 Section */
         .explanation2 {
             margin-top: 40px;
@@ -256,11 +236,8 @@ SOFTWARE.
                 padding: 20px;
             }
 
-            .iframe-container {
-                padding-top: 75%;
-                /* Adjust for mobile */
-                height: 400px;
-                border: 1px solid #60b2a4;
+            h2 {
+                margin-bottom: 20px;
             }
 
             .timeline::before {
@@ -302,9 +279,10 @@ SOFTWARE.
         <!-- Logo -->
         <div class="image-container" style=" text-align: right;">
             <img src="logo.jpg" alt="Logo" style="max-width: 100px;">
+            <img src="cami-logo.jpg" alt="Logo" style="max-width: 100px;">
         </div>
 
-        <h1>DITIB Camisi Erlangen: Geleceğe Bir İz</h1>
+        <h1>DİTİB Camisi Erlangen: Geleceğe Bir İz Bırak</h1>
 
         <!-- Explanation Section -->
         <div class="explanation1">
@@ -320,21 +298,18 @@ SOFTWARE.
                 gelecek nesillerin hayır dualarını ve yüce Allah'ın rızasını kazanabilmek için çok iyi ve önemli bir
                 fırsattır.
             </p>
-        </div>
-
-        <!-- Donation Iframe -->
-        <div class="iframe-container">
-            <iframe src="https://secure.betterplace.org/de/donate/platform/projects/133283"></iframe>
-        </div>
-        <a id="betterplace-hinweis-link" style=" top: -40px; position: relative;">Hinweis zu
-            Betterplace</a>
+            <!-- Video -->
+            <video style="margin-top:10px; border:solid #60b2a4 1px; width:100%" controls>
+                <source src="hoca-video.mp4" type="video/mp4">
+                Tarayıcınız video etiketini desteklemiyor.
+            </video>
 
 
-        <div class="explanation1">
-            <h2>Veya buradan doğrudan PayPal ile bağış yapın:</h2>
+            <!--paypal button -->
+            <h2 style="margin-top:10px;">PayPal ile bağışta bulunabilirsiniz:</h2>
 
             <!-- Donation Options Container -->
-            <div style="display: flex; align-items: center; gap: 15px; margin-top: 20px; margin-left: -20px;">
+            <div style=" display: flex; align-items: center; gap: 15px; margin-top: 20px; margin-left: -20px;">
                 <!-- PayPal Donation Button -->
                 <div id="donate-button-container">
                     <div id="donate-button"></div>
@@ -354,7 +329,7 @@ SOFTWARE.
 
                 <!-- PayPal QR Code -->
                 <div class="image-container">
-                    <img src="QR-code.jpg" alt="PayPal QR Code" style="max-width: 150px;">
+                    <img src="QR-code.jpg" alt="QR-Code für PayPal-Spende an DITIB Erlangen" style="max-width: 150px;">
                 </div>
             </div>
         </div>
@@ -365,24 +340,7 @@ SOFTWARE.
 
             <div class="timeline-item">
                 <div class="timeline-content">
-                    <h3>2023 - 2024</h3>
-                    <ul class="custom-bullets">
-                        <li>Bağış kampanyası</li>
-                        <li>İnşaat ile ilgili görüşmeler</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="timeline-item">
-                <div class="timeline-content">
-                    <h3>2024 - Aralık</h3>
-                    <ul class="custom-bullets">
-                        <li>Yapı ruhsatının alınması</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="timeline-item">
-                <div class="timeline-content">
-                    <h3>2025 - Nisan</h3>
+                    <h3>2025 - Haziran</h3>
                     <ul class="custom-bullets">
                         <li>Planlanan inşaatın temelinin atılması</li>
                     </ul>
@@ -390,7 +348,7 @@ SOFTWARE.
             </div>
             <div class="timeline-item">
                 <div class="timeline-content">
-                    <h3>2028 - Aralık</h3>
+                    <h3>2029 - Aralık</h3>
                     <ul class="custom-bullets">
                         <li>Yeni projemizin kullanılır hale gelmesi</li>
                     </ul>
@@ -415,34 +373,30 @@ SOFTWARE.
                 berber salonu olacak.
             </p>
             <p data-number="5">
-                Hocalarımız için kira ödemekten kurtulup onlara lojman imkânı sağlanacak.
-            </p>
-            <p data-number="6">
                 Sosyal faaliyetlerimizi, eskisi gibi sokak kapatmaya gerek kalmadan, kimseyi rahatsız etmeden kendi
                 alanımızda gerçekleştireceğiz.
             </p>
-            <p data-number="7">
-                Villardır, hepimizin çektiği otopark sıkıntısı bir nebze olsun düzene girecek.
+            <p data-number="6">
+                Yıllardır, hepimizin çektiği otopark sıkıntısı bir nebze olsun düzene girecek.
+
             </p>
-            <p data-number="8">
+            <p data-number="7">
                 Erlangen'deki üniversiteli Müslüman genç öğrencilerimiz için bir buluşma noktası olacak.
             </p>
-            <p data-number="9">
+            <p data-number="8">
                 Cenaze namazları sokakta değil, örf ve adetlerimize uygun bir şekilde camimizin kapalı avlusunda
-                kılınacak.
+                kılınacak. </p>
+            <p data-number="9">
+                Bayram ve Cuma namazları gibi yoğun günlerde cemaatimiz dışarıda kalmayıp, cami içinde veya
+                avlumuzda namazlarını eda edebilecek.
             </p>
             <p data-number="10">
-                Bayram ve Cuma namazları gibi yoğun günlerde cemaatimiz dışarıda kalmayıp, cami içinde veya
-                avlumuzda
-                namazlarını eda edebilecek.
+
             </p>
             <p data-number="11">
-                Özellikle Cuma namazından sonraki kısa sohbetler için uygun bir ortam sağlanacak.
-            </p>
-            <p data-number="12">
                 Aşağıdaki resimde görüldüğü gibi, üstü açık avlu, ferah bir ortam oluşturup, cemaatimizin gönül
-                sohbetlerine ev
-                sahipliği yapacaktır. </p>
+                sohbetlerine ev sahipliği yapacaktır. </p>
+
             <!-- House Image -->
             <div class="image-container">
                 <img src="entwurf.jpg" alt="House Image">
@@ -452,9 +406,11 @@ SOFTWARE.
             <p>
                 <b>DAHA FAZLA BİLGİ İÇİN</b><br>
                 Tel: 0176 705 94 566<br>
+                IBAN: DE26763500001061641153<br>
                 Müracaat: Başkan Enver Sönmez<br>
                 E-Mail: erlangen.tik@t-online.de<br>
-                Adres: Michael Vogel Str. 24B, 91052 Erlangen
+                Adres: Michael Vogel Str. 24B,<br>
+                91052 Erlangen
             </p>
 
             <!-- Footer with Datenschutz Link -->
@@ -468,53 +424,30 @@ SOFTWARE.
             <span class="popup-close" id="datenschutz-close">&times;</span>
             <h2>Datenschutzerklärung</h2>
             <p>
-                Verantwortlicher: DITIB Camisi Erlangen, vertreten durch Enver Sönmez.<br>
-                Diese Website wird auf GitHub Pages gehostet. GitHub kann beim Besuch der Website bestimmte Daten
-                wie
-                IP-Adressen in Server-Logfiles speichern. Weitere Informationen finden Sie in der
-                Datenschutzerklärung
-                von GitHub: <a href="https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement"
-                    target="_blank" rel="noopener noreferrer">GitHub Privacy Statement</a>.<br>
-                Diese Website enthält Links zu externen Plattformen wie Betterplace. Wir haben keine Kontrolle über
-                die
-                Datenverarbeitung durch diese Plattformen. Bitte lesen Sie die Datenschutzrichtlinien der jeweiligen
-                Plattformen.<br>
-                Kontakt: Bei Fragen zum Datenschutz wenden Sie sich bitte an erlangen.tik@t-online.de.
-            </p>
-        </div>
-
-        <!-- Popup for Betterplace Hinweis -->
-        <div class="popup-overlay" id="betterplace-hinweis-overlay"></div>
-        <div class="popup" id="betterplace-hinweis-popup">
-            <span class="popup-close" id="betterplace-hinweis-close">&times;</span>
-            <p>
-                Wenn Sie auf "Spenden über Betterplace" klicken, werden Sie zu Betterplace weitergeleitet. Bitte
-                beachten Sie die <a href="https://www.betterplace.org/c/help/privacy-policy" target="_blank"
-                    rel="noopener noreferrer">Datenschutzrichtlinien von Betterplace</a>.
+                Sorumlu kişi: DITIB Erlangen Camii, Enver Sönmez tarafından temsil edilmektedir.<br>
+                Bu web sitesi GitHub Pages üzerinde barındırılmaktadır. GitHub, siteyi ziyaret ettiğinizde IP adresi
+                gibi bazı verileri sunucu kayıtlarında saklayabilir. Daha fazla bilgi için GitHub’un gizlilik
+                politikasına göz atabilirsiniz: <a
+                    href="https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement"
+                    target="_blank" rel="noopener noreferrer">GitHub Gizlilik Bildirimi</a>.<br>
+                Bu web sitesi, PayPal'a bağlantıyor. Bu platformdaki veri işleme
+                süreçleri üzerinde herhangi bir kontrolümüz yoktur. Lütfen ilgili platformların gizlilik politikalarını
+                okuyunuz.<br>
+                İletişim: Veri koruması ile ilgili sorularınız için lütfen şu adrese başvurun: erlangen.tik@t-online.de
             </p>
         </div>
 
         <script>
             // JavaScript to handle popups
             const datenschutzLink = document.getElementById('datenschutz-link');
-            const betterplaceHinweisLink = document.getElementById('betterplace-hinweis-link');
             const datenschutzPopup = document.getElementById('datenschutz-popup');
-            const betterplaceHinweisPopup = document.getElementById('betterplace-hinweis-popup');
             const datenschutzOverlay = document.getElementById('datenschutz-overlay');
-            const betterplaceHinweisOverlay = document.getElementById('betterplace-hinweis-overlay');
             const datenschutzClose = document.getElementById('datenschutz-close');
-            const betterplaceHinweisClose = document.getElementById('betterplace-hinweis-close');
 
             // Open Datenschutz Popup
             datenschutzLink.addEventListener('click', () => {
                 datenschutzPopup.style.display = 'block';
                 datenschutzOverlay.style.display = 'block';
-            });
-
-            // Open Betterplace Hinweis Popup
-            betterplaceHinweisLink.addEventListener('click', () => {
-                betterplaceHinweisPopup.style.display = 'block';
-                betterplaceHinweisOverlay.style.display = 'block';
             });
 
             // Close Popups
@@ -523,20 +456,10 @@ SOFTWARE.
                 datenschutzOverlay.style.display = 'none';
             });
 
-            betterplaceHinweisClose.addEventListener('click', () => {
-                betterplaceHinweisPopup.style.display = 'none';
-                betterplaceHinweisOverlay.style.display = 'none';
-            });
-
             // Close Popups when clicking outside
             datenschutzOverlay.addEventListener('click', () => {
                 datenschutzPopup.style.display = 'none';
                 datenschutzOverlay.style.display = 'none';
-            });
-
-            betterplaceHinweisOverlay.addEventListener('click', () => {
-                betterplaceHinweisPopup.style.display = 'none';
-                betterplaceHinweisOverlay.style.display = 'none';
             });
         </script>
     </div>
